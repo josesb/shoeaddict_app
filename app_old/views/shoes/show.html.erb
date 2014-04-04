@@ -10,9 +10,6 @@
   <%= image_tag(@shoe.picture_url, :width => 600) if @shoe.has_picture_upload? %>
 </p>
 
-<!-- <%= @shoe.picture %> commented line -->
-<!-- <%= image_tag(@shoe.picture_url, :width => 400) if @shoe.picture.present? %> -->
-
 <p>
   <strong>Designer:</strong>
   <%= @shoe.designer %>
@@ -30,3 +27,5 @@
 
 <%= link_to 'Edit', edit_shoe_path(@shoe) %> |
 <%= link_to 'Back', shoes_path %>
+
+

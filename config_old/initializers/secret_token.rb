@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ShoeaddictApp::Application.config.secret_key_base = '96666e60d00d3808ea3b62a8bbc058a5a54e3d7d2b58a8ff0853ece94a700d51e1b65b7d598dbda66273d5592d1f012e9f1a45f617db6deaca05de0c6f5f152b'
+ShoeaddictApp::Application.config.secret_key_base = '92f593f7a78f36ac807edafdfe13bd73835d901e174ef8957ae27f1d3cc8155c9d4aa922fc2372a5e24d0c921e5095be3913397e6387ffa459553cf779e2a28e'

@@ -12,10 +12,14 @@
 <%= "File \"#{File.basename(@shoe.key)}\" has been uploaded to S3." %>
 <% end %>
 
-<%= form_for(@shoe) do |f| %>
+
+
+
+<%= form_for @shoe, :html => {:multipart => true} do |f| %>
   <% if @shoe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>
+
       <ul>
       <% @shoe.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -28,11 +32,16 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-   <!--
+
+  <!-- these four lines eliminated
+
   <div class="field">
     <%= f.label :picture %><br>
     <%= f.file_field :picture %>
+  </div>
+
   </div> -->
+
   <div class="field">
     <%= f.label :designer %><br>
     <%= f.text_field :designer %>
@@ -46,7 +55,7 @@
     <%= f.text_field :color %>
   </div>
 
-  <%= f.hidden_field :key %>
+  <%= f.hidden_field :key %> <!-- this line added too -->
 
   <div class="actions">
     <%= f.submit %>

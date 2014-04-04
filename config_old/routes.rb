@@ -1,6 +1,6 @@
 ShoeaddictApp::Application.routes.draw do
   resources :shoes
-  root 'shoes#index'
+  root 'shoes#index' # this line added
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

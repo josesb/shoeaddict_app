@@ -1,4 +1,6 @@
-<h1>My Loving Shoes</h1> <!-- customized -->
+<h1>Mis zapatones</h1> <!-- customized -->
+
+
 <table class="table table-hover"> <!-- these classes added -->
   <thead>
     <tr>
@@ -17,8 +19,8 @@
     <% @shoes.each do |shoe| %>
       <tr>
         <td><%= shoe.name %></td>
-        <!--td><%= shoe.picture %></td -->
-        <td><a href="<%= shoe.picture_url %>"><%= image_tag shoe.picture_url(:thumb) if shoe.picture? %></td>
+        <!-- <td>< %= shoe.picture %> --->
+        <td><a href="<%= shoe.picture_url %>"><%= image_tag shoe.picture_url(:thumb) if shoe.picture? %></a></td>
         <td><%= shoe.designer %></td>
         <td><%= shoe.description %></td>
         <td><%= shoe.color %></td>
@@ -33,3 +35,5 @@
 <br>
 
 <%= link_to 'New Shoe', new_shoe_path %>
+
+
